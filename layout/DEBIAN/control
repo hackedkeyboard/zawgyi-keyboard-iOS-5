@@ -1,0 +1,22 @@
+Package: wootylab-mmkeyboard
+Name: MMKeyboard
+Depends: mobilesubstrate, zawgyi-font-ios, firmware (>= 5.0), preferenceloader (>= 2.0.2)
+Version: 0.9
+Architecture: iphoneos-arm
+Description: Zawgyi Keyboard for iOS-5
+ Requires iOS-5 and above
+ 
+ This package replaces Czech keyboard with Zawgyi keyboard.
+ After installing, add Czech keyboard inside Settings.
+ It's possible to change the layout of keys from keyboard. If you can't find out how to, email me.
+ 
+ "Works fine on iPhone, iPod Touch and iPad"
+ 
+ Configure MMkeyboard settings inside Settings.app
+ 
+ visit http://wootylab.com/mmkeyboard if you have troubles setting up.
+Homepage: http://wootylab.com/mmkeyboard
+Maintainer: moeseth
+Author: moeseth <cydia@wootylab.com>
+Section: Tweaks
+Icon: file:///Library/PreferenceBundles/mmkeyboardpref.bundle/cydia_icon.png

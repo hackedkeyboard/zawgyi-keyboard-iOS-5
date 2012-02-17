@@ -1,0 +1,10 @@
+{
+	entry = {
+		bundle = mmkeyboardpref;
+		cell = PSLinkCell;
+		detail = "mmkeyboardprefListController";
+		icon = "mmkeyboard.png";
+		isController = 1;
+		label = MMkeyboard;
+	};
+}

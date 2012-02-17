@@ -1,0 +1,10 @@
+Package: com.w00tylab.remover
+Name: mmkeyboardremover
+Depends: 
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Zawgyi Keyboard Remover
+Maintainer: moeseth
+Author: moeseth
+Section: System
+Tag: role::hacker

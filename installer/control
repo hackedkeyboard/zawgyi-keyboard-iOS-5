@@ -1,0 +1,10 @@
+Package: com.w00tylab.installer
+Name: mmkeyboardinstaller
+Depends: 
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Zawgyi keyboard installer
+Maintainer: moeseth
+Author: moeseth
+Section: System
+Tag: role::hacker
