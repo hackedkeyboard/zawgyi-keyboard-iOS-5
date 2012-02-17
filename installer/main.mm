@@ -1,7 +1,6 @@
 #import <Foundation/Foundation.h>
 
 #define plistPath @"/System/Library/Frameworks/UIKit.framework/Keyboard-cs.plist"
-#define inputPath @"/System/Library/Frameworks/UIKit.framework/Keyboard-cs.plist"
 
 @interface MMKeyboardInstaller : NSObject {}
 - (BOOL) alterPrefValue;
