@@ -59,7 +59,7 @@ static NSString *convertToMyanmar(NSString *str)
         else if ([original isEqualToString:@"’"])
             return @"ႎ";
     }
-    
+        
     if (!isHookedKeyboard && !isExtra)
         return %orig;
 
@@ -113,48 +113,6 @@ static NSString *convertToMyanmar(NSString *str)
     
     return %orig;
 }
-
-- (id)subtreeWithName:(NSString *)name
-{    
-    if (isHookedKeyboard && [name hasPrefix:@"numbers"])
-        return %orig;
-    
-    if ([name intValue] < 10)
-        return %orig;
-    
-    if (isHookedKeyboard && [name hasPrefix:@"3136966873"])
-        return %orig;
-    
-    if (isHookedKeyboard && [name hasPrefix:@"247755690"])
-        return %orig;
-    
-    if (isHookedKeyboard && [name hasPrefix:@"2529512744"])
-    {
-        isExtra = NO;
-        return %orig;
-    }
-    
-    if (isHookedKeyboard && [name hasPrefix:@"772197114"])
-    {
-        isExtra = YES;
-        return %orig;
-    }
-    
-    if (isHookedKeyboard && [name hasPrefix:@"4152776063"])
-    {
-        isExtra = YES;
-        return %orig;
-    }
-    
-    isExtra = NO;
-    
-    if ([name hasPrefix:@"2841643449"] || [name hasPrefix:@"2014430901"] || [name hasPrefix:@"4213087982"] || [name hasPrefix:@"3258129580"] || [name hasPrefix:@"37950658"] || [name hasPrefix:@"1760372625"] || [name hasPrefix:@"2443595442"] || [name hasPrefix:@"1733078254"] || [name hasPrefix:@"3651175134"] || [name hasPrefix:@"3063867177"] || [name hasPrefix:@"1064426334"] || [name hasPrefix:@"1678219313"] || [name hasPrefix:@"2021188196"])
-        isHookedKeyboard = YES;
-    else
-        isHookedKeyboard = NO;
-            
-    return %orig;
-}
 %end
 
 %hook UIKeyboardLayoutStar
@@ -165,28 +123,45 @@ static NSString *convertToMyanmar(NSString *str)
     
     if (name != nil && ![name isEqualToString:oldName]) 
     {
-        NSMutableDictionary *dict = MSHookIvar<NSMutableDictionary *>(self, "_allKeyplaneViews");  
-        NSArray *keys = [dict allKeys];
-    
-        for (NSString *key in keys) 
-        {
-            UIKBKeyplaneView *keyplaneView = [dict objectForKey:key];
-            [keyplaneView setNeedsDisplay];
-        }
+        UIKBKeyplaneView *hookedPlane = MSHookIvar<UIKBKeyplaneView *>(self, "_keyplaneView");
+        [hookedPlane setNeedsDisplay];
     }
+}
+
+-(void)setKeyboardName:(NSString *)name appearance:(int)appearance
+{
+    NSRange range = [name rangeOfString:@"Czech-Slovak"];
+    if (range.location != NSNotFound)
+        isHookedKeyboard = YES;
+    else
+        isHookedKeyboard = NO;
+        
+    %orig;
 }
 %end
 
 %hook UIKBKeyplaneView
 - (id)cacheKey
 {
-    id result = %orig;
+    NSString *result = %orig;   
+        
+    if (isHookedKeyboard)
+    {
+        NSRange range = [result rangeOfString:@"punctuation-alternate"];
+        if (range.location != NSNotFound)
+        {
+            isExtra = YES;
+            return nil;
+        }
+    }
     
-    if ([result hasPrefix:@"772197114"] || [result hasPrefix:@"3136966873"] || [result hasPrefix:@"2529512744"] || [result hasPrefix:@"4152776063"])
+    isExtra = NO;
+    
+    NSRange range = [result rangeOfString:@"numbers-and-punctuation"];
+    if (range.location != NSNotFound)
         return nil;
-    
+        
     UIKeyboardLayoutStar *layout = self.layout;
-    
     return layout.shift ? [result stringByReplacingOccurrencesOfString:@"small" withString:@"capital"] : result;
 }
 %end

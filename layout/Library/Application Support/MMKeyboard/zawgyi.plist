@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Q</key>
-	<string> ွ်</string>
+	<string>ွ်</string>
 	<key>W</key>
 	<string>ၽႊ</string>
 	<key>E</key>
@@ -113,7 +113,7 @@
 	<key>j</key>
 	<string>ျ</string>
 	<key>k</key>
-	<string>ုု</string>
+	<string>ု</string>
 	<key>l</key>
 	<string>ူ</string>
 	<key>z</key>
@@ -176,5 +176,11 @@
 	<string>ဈ</string>
 	<key>*</key>
 	<string>ၳ</string>
+	<key>/</key>
+	<string>၊</string>
+	<key>{</key>
+	<string>ၶ</string>
+	<key>}</key>
+	<string>ဪ</string>
 </dict>
 </plist>

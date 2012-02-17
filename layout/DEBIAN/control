@@ -1,6 +1,6 @@
 Package: wootylab-mmkeyboard
-Name: MMKeyboard
-Depends: mobilesubstrate, zawgyi-font-ios, firmware (>= 5.0), preferenceloader (>= 2.0.2)
+Name: MMKeyboard for iOS5
+Depends: mobilesubstrate, firmware (>= 5.0), preferenceloader (>= 2.0.2)
 Version: 0.9
 Architecture: iphoneos-arm
 Description: Zawgyi Keyboard for iOS-5
@@ -15,6 +15,10 @@ Description: Zawgyi Keyboard for iOS-5
  Configure MMkeyboard settings inside Settings.app
  
  visit http://wootylab.com/mmkeyboard if you have troubles setting up.
+ 
+ Version 0.9-2 changes
+ 1: fix landscape bug
+ 2: support safari url keyboard
 Homepage: http://wootylab.com/mmkeyboard
 Maintainer: moeseth
 Author: moeseth <cydia@wootylab.com>
