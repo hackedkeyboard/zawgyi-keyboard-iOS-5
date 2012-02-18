@@ -143,12 +143,13 @@ static NSString *convertToMyanmar(NSString *str)
 %hook UIKBKeyplaneView
 - (id)cacheKey
 {
-    NSString *result = %orig;   
-        
+    NSString *result = %orig;
     if (isHookedKeyboard)
     {
         NSRange range = [result rangeOfString:@"punctuation-alternate"];
-        if (range.location != NSNotFound)
+        NSRange range1 = [result rangeOfString:@"second-alternate"];
+        
+        if (range.location != NSNotFound || range1.location != NSNotFound)
         {
             isExtra = YES;
             return nil;
@@ -158,7 +159,9 @@ static NSString *convertToMyanmar(NSString *str)
     isExtra = NO;
     
     NSRange range = [result rangeOfString:@"numbers-and-punctuation"];
-    if (range.location != NSNotFound)
+    NSRange range1 = [result rangeOfString:@"first-alternate"];
+
+    if (range.location != NSNotFound || range1.location != NSNotFound)
         return nil;
         
     UIKeyboardLayoutStar *layout = self.layout;
