@@ -1,0 +1,18 @@
+Package: wootylab-mmkeyboard
+Version: 0.9-8
+Section: Tweaks
+Maintainer: moeseth
+Depends: mobilesubstrate, firmware (>= 5.0), preferenceloader (>= 2.0.2)
+Architecture: iphoneos-arm
+Filename: .//deb_builds/wootylab-mmkeyboard_0.9-8_iphoneos-arm.deb
+Size: 35434
+Installed-Size: 112
+MD5sum: 80831272b411810946f45767d39bc2ba
+Description: Zawgyi Keyboard for iOS-5
+ Replace Czech keyboard with Zawgyi keyboard
+icon: file:///Library/PreferenceBundles/mmkeyboardpref.bundle/cydia_icon.png
+depiction: http://wootylab.com/mmkeyboard/description.html
+name: MMKeyboard for iOS5
+author: moeseth <cydia@wootylab.com>
+homepage: http://wootylab.com/mmkeyboard
+

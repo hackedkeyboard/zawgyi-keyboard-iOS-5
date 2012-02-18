@@ -5,7 +5,7 @@ Version: 0.9
 Architecture: iphoneos-arm
 Description: Zawgyi Keyboard for iOS-5
  Replace Czech keyboard with Zawgyi keyboard
-Depiction: http://wootylab.com/mmkeyboard/description.html
+depiction: http://wootylab.com/mmkeyboard/description.html
 Homepage: http://wootylab.com/mmkeyboard
 Maintainer: moeseth
 Author: moeseth <cydia@wootylab.com>

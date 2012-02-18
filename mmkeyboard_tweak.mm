@@ -63,6 +63,8 @@ static NSString *convertToMyanmar(NSString *str)
     
     if (isCap && [original isEqualToString:@"´"])
         return @"ၚ";
+    else if (isCap && [original isEqualToString:@"ˇ"])
+        return @"ဓ";
         
     if (!isHookedKeyboard && !isExtra)
         return %orig;
@@ -103,6 +105,11 @@ static NSString *convertToMyanmar(NSString *str)
         else if ([original isEqualToString:@"'"])
             return @"ႎ";
     }
+    
+    if (isCap && [original isEqualToString:@"´"])
+        return @"ၚ";
+    else if (isCap && [original isEqualToString:@"ˇ"])
+        return @"ဓ";
     
     if (!isHookedKeyboard && !isExtra)
         return %orig;
