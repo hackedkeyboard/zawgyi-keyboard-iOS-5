@@ -5,4 +5,8 @@ echo "*** Clearing keyboard Caches ***"
 echo ""
 echo "*** Thanks for using this. ***"
 echo "----------"
+echo " "
+echo "Respring Now"
+echo "Respring Now"
+echo " "
 exit 0;
