@@ -4,24 +4,8 @@ Depends: mobilesubstrate, firmware (>= 5.0), preferenceloader (>= 2.0.2)
 Version: 0.9
 Architecture: iphoneos-arm
 Description: Zawgyi Keyboard for iOS-5
- Please install zawgyi font before installing this
- Requires iOS-5 and above
- 
- This package replaces Czech keyboard with Zawgyi keyboard.
- After installing, add Czech keyboard inside Settings.
- It's possible to change the layout of keys from keyboard. If you can't find out how to, email me.
- 
- "Works fine on iPhone, iPod Touch and iPad"
- 
- Configure MMkeyboard settings inside Settings.app
- 
- visit http://wootylab.com/mmkeyboard if you have troubles setting up.
- 
- Version 0.9-2 changes
- 1: fix landscape bug
- 2: support safari url keyboard
- 
- It's also open-sourced, and can be viewed at https://github.com/hackedkeyboard/zawgyi-keyboard-iOS-5
+ Replace Czech keyboard with Zawgyi keyboard
+Depiction: http://wootylab.com/mmkeyboard/description.html
 Homepage: http://wootylab.com/mmkeyboard
 Maintainer: moeseth
 Author: moeseth <cydia@wootylab.com>

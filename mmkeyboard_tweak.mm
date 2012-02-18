@@ -1,6 +1,7 @@
 static BOOL isHookedKeyboard = NO;
 static NSDictionary *dict = nil;
 static BOOL isExtra = NO;
+static BOOL isCap = NO;
 
 static NSString *convertToMyanmar(NSString *str)
 {
@@ -59,6 +60,9 @@ static NSString *convertToMyanmar(NSString *str)
         else if ([original isEqualToString:@"’"])
             return @"ႎ";
     }
+    
+    if (isCap && [original isEqualToString:@"´"])
+        return @"ၚ";
         
     if (!isHookedKeyboard && !isExtra)
         return %orig;
@@ -143,7 +147,7 @@ static NSString *convertToMyanmar(NSString *str)
 %hook UIKBKeyplaneView
 - (id)cacheKey
 {
-    NSString *result = %orig;
+    NSString *result = %orig;    
     if (isHookedKeyboard)
     {
         NSRange range = [result rangeOfString:@"punctuation-alternate"];
@@ -165,6 +169,12 @@ static NSString *convertToMyanmar(NSString *str)
         return nil;
         
     UIKeyboardLayoutStar *layout = self.layout;
+    
+    if (layout.shift)
+        isCap = YES;
+    else
+        isCap = NO;
+    
     return layout.shift ? [result stringByReplacingOccurrencesOfString:@"small" withString:@"capital"] : result;
 }
 %end
