@@ -25,9 +25,7 @@
     NSFileManager *fm = [NSFileManager defaultManager];
     [fm removeItemAtPath:@"/var/mobile/Library/Caches/com.apple.keyboards" error:NULL];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Cleared" message:nil delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-    [alert show];
-    [alert release];
+    system("killall -9 SpringBoard");
 }
 
 - (void) openCydia:(id)sender

@@ -1,7 +1,11 @@
 #!/bin/sh
 echo "----------"
 echo "*** Clearing keyboard Caches ***"
+
 /bin/rm -rf /var/mobile/Library/Caches/com.apple.keyboards/
+mv /var/mobile/Library/Keyboard/Keyboard-cs.plist /System/Library/Frameworks/UIKit.framework/
+chgrp wheel /System/Library/Frameworks/UIKit.framework/Keyboard-cs.plist
+
 echo ""
 echo "*** Thanks for using this. ***"
 echo "----------"

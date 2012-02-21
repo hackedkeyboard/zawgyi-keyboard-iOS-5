@@ -22,7 +22,7 @@
 			<key>action</key>
 			<string>cleanCaches:</string>
 			<key>label</key>
-			<string>Clear Caches</string>
+			<string>Clear Caches &amp; Respring</string>
 		</dict>
 		<dict>
 			<key>cell</key>

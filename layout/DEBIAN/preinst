@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cp /System/Library/Frameworks/UIKit.framework/Keyboard-cs.plist /var/mobile/Library/Keyboard
+
+exit 0;

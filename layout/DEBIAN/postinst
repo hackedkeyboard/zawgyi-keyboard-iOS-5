@@ -3,8 +3,8 @@
 echo "---------"
 echo "*** Clearing keyboard Caches ***"
 
-mmkeyboardinstaller
 /bin/rm -rf /var/mobile/Library/Caches/com.apple.keyboards/
+
 echo ""
 echo "*** Follow me on twitter @moeseth ***"
 echo "---------"

@@ -6,7 +6,7 @@ TWEAK_NAME = mmkeyboard
 mmkeyboard_FILES = mmkeyboard_tweak.xm
 mmkeyboard_FRAMEWORKS = UIKit QuartzCore
 
-SUBPROJECTS = mmkeyboardpref installer remover
+SUBPROJECTS = mmkeyboardpref
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 include $(THEOS_MAKE_PATH)/aggregate.mk

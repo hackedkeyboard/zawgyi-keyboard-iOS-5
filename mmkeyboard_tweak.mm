@@ -11,9 +11,6 @@ static NSString *convertToMyanmar(NSString *str)
     return [dict objectForKey:str];
 }
 
-@interface UIKeyboard
-@end
-
 @interface UIKeyboardLayout : UIView
 @end
 
@@ -31,15 +28,6 @@ static NSString *convertToMyanmar(NSString *str)
 
 @interface UIKBKeyplaneView
 @property(assign, nonatomic) UIKeyboardLayoutStar *layout;
-@end
-
-@interface UIKeyboardImpl
-+ (id)activeInstance;
-@end
-
-@interface UIKBShape
-@property(assign, nonatomic) CGRect paddedFrame;
-@property(assign, nonatomic) CGRect frame;
 @end
 
 %hook UIKBTree

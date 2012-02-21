@@ -1,7 +1,7 @@
 Package: wootylab-mmkeyboard
 Name: MMKeyboard for iOS5
 Depends: mobilesubstrate, firmware (>= 5.0), preferenceloader (>= 2.0.2)
-Version: 0.9
+Version: 1.0
 Architecture: iphoneos-arm
 Description: Zawgyi Keyboard for iOS-5
  Replace Czech keyboard with Zawgyi keyboard
