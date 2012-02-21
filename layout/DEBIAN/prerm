@@ -1,4 +1,0 @@
-#!/bin/sh
-
-mmkeyboardremover
-exit 0;
